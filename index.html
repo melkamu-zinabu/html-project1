@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>final project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascriptFunctions.js" type="text/javascript"></script>
+
+
+
+</head>
+
+<body>
+    <h1>survey form</h1>
+    <h2>purpose of this form</h2>
+    <p>
+        as you know , survey is a research method used for collecting data from a predefined group of respondentsto gain information and insights into various topics of interest. They can have multiple purposes, and researchers can conduct it in many ways depending
+        on the methodology chosen and the study's goal. so i prepare this form inorder gain respondant interest regarding project topic selection .
+    </p>
+    <p>GPA needed to participate in the project </p>
+
+    <! GPA needed to participate specified below -->
+
+    <table>
+        <tr>
+            <th>degree</th>
+            <th>GPA</th>
+        </tr>
+        <tr>
+            <td>Bsc</td>
+            <td>3.25</td>
+        </tr>
+        <tr>
+            <td>Msc</td>
+            <td>3.5</td>
+        </tr>
+    </table>
+
+    <h3>
+        fill the form here !!
+    </h3>
+
+    <!-- MAIN FORM IS DOWN HERE -->
+
+    <form id="myform" action="#">
+        <span class="mylabel">First Name</span>
+        <input onblur="validateFName()" class="myinput" type="text" maxlength="10" id="firstname" placeholder=" between 3-10 letters" required>
+        <span class="feedback" id="feedbfname"></span>
+        <br>
+
+        <span class="mylabel">Email Address</span>
+        <input pattern="^\S+@\S+\.\S+$" onblur="validateEmailAndType()" class="myinput" type="email" id="email" placeholder=" valid email address" required>
+        <span class="feedback" id="feedbemail">validated by pattern + JS</span>
+        <br>
+
+        <p>Where are you pursuing your undergraduate degree? *</p>
+        <input type="radio" name="project">
+        <label>Addis Ababa University (AAiT)</label><br>
+        <input type="radio" name="project">
+        <label>university of rwanda</label><br>
+        <input type="radio" name="project">
+        <label>Addis Ababa University (cncs)</label><br>
+        <input type="radio" name="project">
+        <label>other</label><br>
+        <p>Which degree (and stream) are you currently pursuing? *</p>
+        <select>
+                
+                <option value="Bsc in computer science">Bsc in computer scince</option>
+                <option value="Bsc in software engineering">Bsc in software engineering</option>
+                <option value="Bsc in computer engineering">Bsc in comuter enginnering </option>
+                <option value="other">other</option>
+            </select><br>
+        <p>Project selection #1 - select your top preference among the research projects available *</p><br>
+
+        <select id="selec">
+                
+                <option value="computed on encrypted data">computed on incrypted data</option>
+                <option value="software engineering"> Accelerating Explainable AI</option>
+                <option value="Automated analog generation ">Automated analog generation </option>
+                <option value=" Let’s build some robots  "> Let’s build some robots </option>
+                <option value="Analog and digital circuit design  ">Analog and digital circuit design </option>
+                <option value="energy ">Integrating more renewable energy into African power grids  </option>
+                
+            </select><br>
+        <p>Project selection #2 - select your second preference among the research projects available *</p><br>
+        <select id="selec">
+                
+                <option value="computed on encrypted data">computed on incrypted data</option>
+                <option value="software engineering"> Accelerating Explainable AI</option>
+                <option value="Automated analog generation ">Automated analog generation </option>
+                <option value=" Let’s build some robots  "> Let’s build some robots </option>
+                <option value="Analog and digital circuit design  ">Analog and digital circuit design </option>
+                <option value="energy ">Integrating more renewable energy into African power grids  </option>
+            </select><br>
+        <p>Why are you interested in pursuing research within the AURA program?</p><br>
+        <textarea></textarea><br>
+        <p>Do you have past research/project experiences of any type (including work in a company)? <br>If yes, please elaborate.</p>
+        <textarea></textarea><br>
+        <label for="file">Please upload a transcript. *</label><br>
+        <input type="file" name="file" required><br>
+        <label for="file">If you have a current resume, please upload it. *</label><br>
+        <input type="file" name="file" required><br>
+
+
+    </form>
+
+    <img id="endBanner" src="https://images.pexels.com/photos/791024/pexels-photo-791024.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Thanks Image">
+
+
+
+</body>
+
+</html>
