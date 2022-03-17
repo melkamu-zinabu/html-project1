@@ -1,0 +1,52 @@
+body {
+    background-color: powderblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h3 {
+    padding: 10px;
+    margin: 5px auto;
+    width: 800px;
+}
+
+h1,
+h2 {
+    padding: 10px;
+    margin: 10px 400px;
+    width: 800px;
+}
+
+p {
+    padding: 10px;
+    margin: 5px auto;
+    width: 800px;
+}
+
+table,
+th,
+td {
+    border: 1px double;
+    border-collapse: collapse;
+    margin: 10px 400px;
+    padding: 4px;
+    width: 600px;
+}
+
+
+/* #(ID) or .(class) used below to reference HTML element for styling */
+
+#endBanner {
+    margin: 10px 400px;
+}
+
+#myform {
+    margin: 10px 400px;
+    border: 4px double;
+    padding: 4px;
+    width: 600px;
+}
+
+#selec {
+    width: 166px;
+    height: 50px;
+}
