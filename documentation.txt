@@ -1,7 +1,0 @@
-This project contains four files in total
-- index.html (main HTML source file)
-- javascriptFunctions.js (for form validation and dynamic behaviour)
-- styles.css (for custom styling of contents on webpage)
-- documentation.rtf (which you are reading right now:)
- html and javascript comment are used inorder to make easy to understand
-# CHEERS.
