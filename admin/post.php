@@ -55,18 +55,20 @@ if (count($err) == 0) {
     </form>
   </div>
   <h3>display image </h3>
+  //it should be commented until ?>
   <?php
-  $rel="select * from upload";
-  $que=mysqli_query($conn,$rel);
-  $output="";
-  if(mysqli_num_rows($que)<1){
-     $output .="<h3>no image uploaded</h3>";
-
-  }
-  while($row=mysqli_fetch_array($que)){
-      $output="<image src='".$row['image']."'fstyle='width:400px;height:400px;'>";
-  }
+  $conn= mysqli_connect("localhost","root","","db");
+  $sql="select * from upload";
+  $result=mysqli_query($conn,$sql);
+     while($rows=mysqli_fetch_assoc($result)) {
+      echo'<img alt="image" height="300" width="300" src="'.$rows['image'].'">';
+         echo "<a href=''>update</a>";
+         echo "<a href=''>update</a>";
+     }
+      
+  
   ?>
+ ?>
   </div>
 </body>
 </html>
