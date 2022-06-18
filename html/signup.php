@@ -45,13 +45,9 @@ if(isset($_POST['SIGNUP'])){
   if (count($err) == 0) {
       $query = "INSERT INTO users ( fristname, lastname, sex, email, password) 
             VALUES('$fname', '$lname', '$sex','$email',  '$pass1')";
-      $res=mysqli_query($conn, $query);
-      if($res){
-        move_uploaded_file($_FILES['image']['tmp_name'],"$file");
-        $congra="You are successfully ";
-      }
+      mysqli_query($conn, $query);
         //echo "You are successfully registerd! login please!";
-       
+        $congra="You are successfully registerd! login please!";
 }}
 ?>
 

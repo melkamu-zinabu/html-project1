@@ -1,7 +1,4 @@
-<?php
 
-error_reporting(0);
-?>
 <?php
 $msg = "";
 
@@ -12,13 +9,13 @@ if (isset($_POST['upload'])) {
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
 		$folder = "image/".$filename;
 		
-	$db = mysqli_connect("localhost", "root", "", "db");
+	$conn = mysqli_connect("localhost", "root", "", "db");
 
 		// Get all the submitted data from the form
 		$sql = "INSERT INTO upload (image) VALUES ('$filename')";
 
 		// Execute query
-		mysqli_query($db, $sql);
+		mysqli_query($conn, $sql);
 		
 		// Now let's move the uploaded image into the folder: image
 		if (move_uploaded_file($tempname, $folder)) {
@@ -27,16 +24,6 @@ if (isset($_POST['upload'])) {
 			$msg = "Failed to upload image";
 	}
 }
-$result = mysqli_query($db, "SELECT * FROM upload");
-while($data = mysqli_fetch_array($result))
-{
-
-	?>
-<img src="<?php echo $data['Filename']; ?>">
-
-<?php
-}
-?>
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +33,7 @@ while($data = mysqli_fetch_array($result))
 <link rel="stylesheet" type= "text/css" href ="style.css"/>
 <div id="content">
 
-<form method="POST" action="" enctype="multipart/form-data">
+<form  method="POST" action="post2.php" enctype="multipart/form-data">
 	<input type="file" name="uploadfile" value=""/>
 	
 	<div>

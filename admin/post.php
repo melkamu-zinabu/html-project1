@@ -61,7 +61,7 @@ if (count($err) == 0) {
   $sql="select * from upload";
   $result=mysqli_query($conn,$sql);
      while($rows=mysqli_fetch_assoc($result)) {
-      echo'<img alt="image" height="300" width="300" src="'.$rows['image'].'">';
+      echo'<img height="300" width="300" src="'.$rows['image'].'">';
          echo "<a href=''>update</a>";
          echo "<a href=''>update</a>";
      }
